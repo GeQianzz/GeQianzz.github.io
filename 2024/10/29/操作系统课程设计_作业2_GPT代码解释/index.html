@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Website mata -->
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<!-- Disable transformation -->
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<!-- Website description -->
+
+<meta name="description" content="This is the title" />
+
+
+<!-- Website keywords -->
+
+<meta name="keywords" content="OS, Hexo" />
+
+
+
+
+<!-- Website rss -->
+
+<link rel="alternate" href="/default" title="Hexo" >
+
+
+<!-- Website favicon -->
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=3.0.0" />
+
+
+<!-- Canonical, good for google search engine -->
+<link rel="canonical" href="http://example.com/2024/10/29/操作系统课程设计_作业2_GPT代码解释/" />
+
+<!-- Fancybox styling -->
+
+<link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
+
+
+<!-- MathJax (LaTeX) support -->
+
+
+<!-- Theme styling -->
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=3.0.0" />
+
+<!-- Analytics and push -->
+
+
+
+  
+
+
+
+<!-- LeanCloud Counter -->
+
+
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null,"server_url":null,"cdn":null},"toc":true,"fancybox":true,"latex":false};
+</script>
+  
+  <title>This is the title - Hexo</title>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div class="scrollPercentage"></div>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">Hexo</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+    <a href="/">
+      <li class="mobile-menu-item">
+        
+        
+        Home              </li>
+    </a>
+    
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+      <div class="logo-wrapper">  
+  <a href="/." class="logo">Hexo</a>  
+</div>  
+  
+<nav class="site-navbar">  
+    
+    <ul id="menu" class="menu">  
+        
+        <li class="menu-item">  
+          <a class="menu-item-link" href="/">  
+              
+              
+              Home  
+              
+          </a>  
+        </li>  
+        
+    </ul>  
+    
+</nav>  
+
+    </header>
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      This is the title
+      
+    </h1>
+
+    <div class="post-meta">
+      <span class="post-time">
+        2024-10-29
+      </span>
+      
+      
+      
+    </div>
+  </header>
+
+  
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#This-is-the-Title"><span class="toc-number">1.</span> <span class="toc-text">This is the Title</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%A4%B4%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. 头文件包含</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%A8%A1%E5%9D%97%E4%BF%A1%E6%81%AF"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 模块信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%BB%93%E6%9E%84%E4%BD%93%E5%AE%9A%E4%B9%89"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. 结构体定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%86%85%E6%A0%B8%E7%BA%BF%E7%A8%8B%E6%89%A7%E8%A1%8C%E4%BD%93"><span class="toc-number">1.0.4.</span> <span class="toc-text">4. 内核线程执行体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%B7%A5%E4%BD%9C%E9%98%9F%E5%88%97%E6%89%A7%E8%A1%8C%E4%BD%93"><span class="toc-number">1.0.5.</span> <span class="toc-text">5. 工作队列执行体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%BB%B6%E8%BF%9F%E5%B7%A5%E4%BD%9C%E6%89%A7%E8%A1%8C%E4%BD%93"><span class="toc-number">1.0.6.</span> <span class="toc-text">6. 延迟工作执行体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E6%A8%A1%E5%9D%97%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.0.7.</span> <span class="toc-text">7. 模块初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E6%A8%A1%E5%9D%97%E9%80%80%E5%87%BA"><span class="toc-number">1.0.8.</span> <span class="toc-text">8. 模块退出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E6%A8%A1%E5%9D%97%E5%8A%A0%E8%BD%BD%E4%B8%8E%E5%8D%B8%E8%BD%BD"><span class="toc-number">1.0.9.</span> <span class="toc-text">9. 模块加载与卸载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.0.10.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </div>
+  
+
+  <div class="post-content">
+    
+    <h1 id="This-is-the-Title"><a href="#This-is-the-Title" class="headerlink" title="This is the Title"></a>This is the Title</h1><p>这段代码是一个 Linux 内核模块的实现，演示了如何使用内核线程和工作队列来执行延迟工作。以下是对代码的详细解释：</p>
+<h3 id="1-头文件包含"><a href="#1-头文件包含" class="headerlink" title="1. 头文件包含"></a>1. 头文件包含</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;linux/module.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;linux/kernel.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;linux/init.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;linux/sched.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;linux/kthread.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;linux/slab.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;linux/delay.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;linux/workqueue.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;linux/atomic.h&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>这些头文件提供了内核模块编程所需的基本功能：</p>
+<ul>
+<li><code>module.h</code>: 定义了模块的宏和函数。</li>
+<li><code>kernel.h</code>: 提供基本的内核功能。</li>
+<li><code>init.h</code>: 用于模块的初始化和清理。</li>
+<li><code>sched.h</code>: 进程调度和任务管理。</li>
+<li><code>kthread.h</code>: 内核线程相关的函数。</li>
+<li><code>slab.h</code>: 内存管理相关的功能。</li>
+<li><code>delay.h</code>: 延时函数。</li>
+<li><code>workqueue.h</code>: 工作队列相关的功能。</li>
+</ul>
+<h3 id="2-模块信息"><a href="#2-模块信息" class="headerlink" title="2. 模块信息"></a>2. 模块信息</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MODULE_LICENSE(<span class="string">&quot;GPL&quot;</span>);</span><br><span class="line">MODULE_AUTHOR(<span class="string">&quot;FuShengyuan&quot;</span>);</span><br><span class="line">MODULE_DESCRIPTION(<span class="string">&quot;Deferred work example with work queue and kernel thread&quot;</span>);</span><br></pre></td></tr></table></figure>
+<p>这些宏用于提供模块的元信息，便于了解模块的版权、作者和描述。</p>
+<h3 id="3-结构体定义"><a href="#3-结构体定义" class="headerlink" title="3. 结构体定义"></a>3. 结构体定义</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">work_ctx</span> &#123;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">work_struct</span> <span class="title">work</span>;</span></span><br><span class="line">    <span class="type">int</span> current_id;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><code>work_ctx</code> 结构体用于存储每个工作项的信息，包括一个 <code>work_struct</code> 和一个表示 ID 的 <code>current_id</code>。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">delayed_work</span> <span class="title">my_delayed_work</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">work_ctx</span> <span class="title">works</span>[10];</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">task_struct</span> *<span class="title">threads</span>[10];</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>my_delayed_work</code>: 用于延迟工作的结构体。</li>
+<li><code>works[10]</code>: 数组存储 10 个工作上下文。</li>
+<li><code>threads[10]</code>: 数组存储 10 个内核线程的指针。</li>
+</ul>
+<h3 id="4-内核线程执行体"><a href="#4-内核线程执行体" class="headerlink" title="4. 内核线程执行体"></a>4. 内核线程执行体</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">kthread_handler</span><span class="params">(<span class="type">void</span> *data)</span> &#123;</span><br><span class="line">    <span class="type">int</span> id = *(<span class="type">int</span> *)data;</span><br><span class="line">    printk(KERN_INFO <span class="string">&quot;Kernel thread %d executed\n&quot;</span>, id);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>kthread_handler</code> 是内核线程的执行函数。它从参数中获取 ID，并打印相关信息。</p>
+<h3 id="5-工作队列执行体"><a href="#5-工作队列执行体" class="headerlink" title="5. 工作队列执行体"></a>5. 工作队列执行体</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">work_queue_handler</span><span class="params">(<span class="keyword">struct</span> work_struct *work)</span> &#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">work_ctx</span> *<span class="title">ctx</span> =</span> container_of(work, <span class="keyword">struct</span> work_ctx, work);</span><br><span class="line">    printk(KERN_INFO <span class="string">&quot;Work queue handler executed: %d\n&quot;</span>, ctx-&gt;current_id);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>work_queue_handler</code> 是工作队列的处理函数。它使用 <code>container_of</code> 宏获取当前上下文并打印 ID。</p>
+<h3 id="6-延迟工作执行体"><a href="#6-延迟工作执行体" class="headerlink" title="6. 延迟工作执行体"></a>6. 延迟工作执行体</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">delayed_work_handler</span><span class="params">(<span class="keyword">struct</span> work_struct *work)</span> &#123;</span><br><span class="line">    printk(KERN_INFO <span class="string">&quot;Delayed work executed!\n&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>delayed_work_handler</code> 是延迟工作的处理函数，简单地打印一条消息。</p>
+<h3 id="7-模块初始化"><a href="#7-模块初始化" class="headerlink" title="7. 模块初始化"></a>7. 模块初始化</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">deferred_work_init</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">    printk(KERN_INFO <span class="string">&quot;Deferred work module init\n&quot;</span>);</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 初始化工作队列</span></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">        works[i].current_id = <span class="number">240</span> + i; <span class="comment">// 学号后3位</span></span><br><span class="line">        INIT_WORK(&amp;works[i].work, work_queue_handler);</span><br><span class="line">        queue_work(system_wq, &amp;works[i].work); <span class="comment">// 提交工作到工作队列</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建一个内核线程</span></span><br><span class="line">        threads[i] = kthread_run(kthread_handler, &amp;works[i].current_id, <span class="string">&quot;kthread_%d&quot;</span>, works[i].current_id);</span><br><span class="line">        <span class="keyword">if</span> (IS_ERR(threads[i])) &#123;</span><br><span class="line">            printk(KERN_ERR <span class="string">&quot;Failed to create kernel thread %d\n&quot;</span>, i);</span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置延迟工作</span></span><br><span class="line">    INIT_DELAYED_WORK(&amp;my_delayed_work, delayed_work_handler);</span><br><span class="line">    schedule_delayed_work(&amp;my_delayed_work, msecs_to_jiffies(<span class="number">5000</span>)); <span class="comment">// 延迟5秒执行</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>deferred_work_init</code> 是模块的初始化函数。</li>
+<li>首先打印初始化消息。</li>
+<li>然后，通过循环初始化 10 个工作项和内核线程。每个工作项调用 <code>queue_work()</code> 提交到系统工作队列。</li>
+<li>通过 <code>kthread_run()</code> 创建内核线程并传入当前 ID。</li>
+<li>检查线程创建是否成功。</li>
+<li>设置 <code>my_delayed_work</code>，并使用 <code>schedule_delayed_work()</code> 在 5 秒后执行。</li>
+</ul>
+<h3 id="8-模块退出"><a href="#8-模块退出" class="headerlink" title="8. 模块退出"></a>8. 模块退出</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">deferred_work_exit</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 取消延迟工作</span></span><br><span class="line">    cancel_delayed_work_sync(&amp;my_delayed_work);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 等待所有线程结束</span></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (threads[i]) &#123;</span><br><span class="line">            kthread_stop(threads[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    printk(KERN_INFO <span class="string">&quot;Deferred work module exit\n&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>deferred_work_exit</code> 是模块的清理函数。</li>
+<li>首先取消延迟工作，确保不会执行。</li>
+<li>然后停止所有创建的内核线程。</li>
+<li>最后打印退出消息。</li>
+</ul>
+<h3 id="9-模块加载与卸载"><a href="#9-模块加载与卸载" class="headerlink" title="9. 模块加载与卸载"></a>9. 模块加载与卸载</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">module_init(deferred_work_init);</span><br><span class="line">module_exit(deferred_work_exit);</span><br></pre></td></tr></table></figure>
+<p>这两行代码定义了模块的初始化和退出函数，使得模块可以在加载和卸载时执行相应的操作。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这个内核模块展示了如何利用工作队列和内核线程处理延迟工作。它初始化 10 个工作项和线程，通过打印 ID 来区分每个执行单元，同时演示了延迟工作的效果。通过这种方式，用户可以观察到工作队列和内核线程的执行顺序差异。</p>
+<p><img src="https://raw.githubusercontent.com/GeQianzz/Blog_image/master/Blog_image/202410290932955.png" alt="image.png|675"></p>
+
+    
+  </div>
+
+  
+  <!-- Post Copyright -->
+
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span>Author: </span>
+    <a href="http://example.com">John Doe</a>
+  </p>
+  <p class="copyright-item">
+    <span>Link: </span>
+    <a href="http://example.com/2024/10/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1_%E4%BD%9C%E4%B8%9A2_GPT%E4%BB%A3%E7%A0%81%E8%A7%A3%E9%87%8A/">http://example.com/2024/10/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1_%E4%BD%9C%E4%B8%9A2_GPT%E4%BB%A3%E7%A0%81%E8%A7%A3%E9%87%8A/</a>
+  </p>
+  <p class="copyright-item">
+    <span>License: </span>
+    
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+  </p>
+</div>
+
+    
+
+  
+
+  
+  <footer class="post-footer">
+    
+    <div class="post-tags">
+      
+      <a href="/tags/OS/">OS</a>
+      
+    </div>
+    
+      
+  <nav class="post-nav">  
+      
+      <a class="prev" href="/2024/10/29/test1/">  
+        <i class="iconfont icon-left"></i>  
+        <span class="prev-text nav-default">test1</span>  
+        <span class="prev-text nav-mobile">Prev</span>  
+      </a>  
+      
+      
+      <a class="next" href="/2024/08/16/Hello-Hexo/">  
+        <span class="next-text nav-default">Hello Hexo</span>  
+        <span class="prev-text nav-mobile">Next</span>  
+        <i class="iconfont icon-right"></i>  
+      </a>  
+      
+  </nav>  
+  
+
+  </footer>
+  
+
+</article>
+        </div>
+          
+  <div class="comments" id="comments">  
+      
+  </div>  
+  
+
+      </div>
+    </main>
+    <footer id="footer" class="footer">
+      <!-- Social Links -->
+
+<div class="social-links">
+  
+  
+  
+  
+  <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a target="_blank" rel="noopener" href="https://github.com/ahonn" class="iconfont icon-github" title="github"></a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+  
+</div>
+
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme -
+    <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/zeed-w-beez/hexo-theme-even">Even</a>
+  </span>
+  <span class="division">|</span>
+  <span class="hosting-info">
+    footer.hosting
+  </span>
+
+  <span class="copyright-year">
+    <span>
+      
+      &copy;
+      
+      2015 - 2024      
+    </span>
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+
+    <span class="author">John Doe</span>
+  </span>
+
+</div>
+    </footer>
+    <div class="back-to-top" id="back-to-top"> <i class="iconfont icon-up"></i> </div>
+  </div>
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+
+
+
+
+
+
+
+<script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+
+
+
+<script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+
+
+
+<script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+  <script type="text/javascript" src="/js/src/even.js?v=3.0.0"></script>
+</body>
+
+</html>
